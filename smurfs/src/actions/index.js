@@ -41,7 +41,7 @@ export const FETCH_SMURF_FAILURE = 'FETCH_SMURF_FAILURE';
 export const getSmurf = (newSmurf) => dispatch => {
     dispatch({ type: FETCH_SMURF_START });
     axios
-        .post("http://localhost:3333/api/smurfs", newSmurf)
+        .post("http://localhost:3333/smurfs", newSmurf)
         .then(res => { 
             console.log("actions log :", res.data)
      dispatch({ type: FETCH_SMURF_SUCCESS, payload: res.data});

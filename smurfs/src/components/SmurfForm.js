@@ -7,11 +7,11 @@ export class SmurfForm extends Component {
         super(props);
         this.state = {
           name: '',
-          id: null,
+          id: '',
           age:'',
           height:'',
           addingSmurfs: false,
-          deleteFriend: false
+        
         };
       }
     
@@ -51,7 +51,7 @@ export class SmurfForm extends Component {
             value={this.state.height}
             name="height"
           />
-          <button onClick={()=> this.addSmurf()}>Add Smurf</button>
+          <button type='submit'>Add Smurf</button>
         </form> 
             </div>
         )

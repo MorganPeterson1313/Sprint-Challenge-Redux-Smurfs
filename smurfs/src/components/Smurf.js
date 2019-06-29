@@ -7,10 +7,10 @@ const Smurf = props => {
         <strong>Name:</strong> {props.smurf.name}
       </section>
       <section>
-        <strong>Email:</strong> {props.smurf.age}
+        <strong>Age:</strong> {props.smurf.age}
       </section>
       <section>
-        <strong>Email:</strong> {props.smurf.height}
+        <strong>Height:</strong> {props.smurf.height}
       </section>
     </div>
   );

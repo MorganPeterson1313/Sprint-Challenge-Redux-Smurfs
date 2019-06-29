@@ -26,11 +26,11 @@ class App extends Component {
           <UList>
             <li>
               <Link
-                style={{ color: "dodgerblue", textDecoration: "none" }} to="/smurf">
+                style={{ color: "yellow", textDecoration: "none", }} to="/smurf">
                 Smurf Village
               </Link>
               <Link
-                style={{ color: "dodgerblue", textDecoration: "none" }} to="/form">
+                style={{ color: "yellow", textDecoration: "none", marginLeft: "15%" }} to="/form">
                 Add Smurf
               </Link>
             </li>
