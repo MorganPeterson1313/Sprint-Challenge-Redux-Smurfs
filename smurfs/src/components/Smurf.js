@@ -2,7 +2,7 @@ import React from "react";
 
 const Smurf = props => {
   return (
-    <div style={{ color: "blue", fontSize: "30px" }}>
+    <div style={{ color: "brown", fontSize: "30px" }}>
       <section>
         <strong>Name:</strong> {props.smurf.name}
       </section>

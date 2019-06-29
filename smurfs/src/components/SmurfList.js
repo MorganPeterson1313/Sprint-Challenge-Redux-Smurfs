@@ -11,20 +11,21 @@ export class SmurfList extends Component {
   render() {
     console.log("smurflist log", this.props.smurfs);
     return (
-      <div
-      style={{
-        bacgroundColor: "rgba(0, 0, 0,.03)",
-        border: "solid 2px brown ",
-        margin: "5%",
-        width: "400px",
-        height: "200px",
-        marginLeft: '35%'
-      
-      }}
-      >
+      <div>
         {this.props.smurfs.map(smurf => {
           return (
-            <div>
+            <div
+            
+            style={{
+              bacgroundColor: "rgba(0, 0, 0,.03)",
+              border: "solid 2px brown ",
+              margin: "5%",
+              width: "400px",
+              height: "200px",
+              marginLeft: '35%'
+            
+            }}
+            >
               <Smurf key={smurf.id} smurf={smurf} />
             </div>
           );

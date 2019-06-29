@@ -7,10 +7,10 @@ import styled from "styled-components";
 
 const UList = styled.ul`
   display: flex;
-  margin-left: 35%;
   list-style: none;
-  border-bottom: 2px grey solid;
-  width: 300px;
+  border-bottom: 2px coral solid;
+  width: auto;
+  
 `;
 /*
  to wire this component up you're going to need a few things.
@@ -29,8 +29,10 @@ class App extends Component {
                 style={{ color: "yellow", textDecoration: "none", }} to="/smurf">
                 Smurf Village
               </Link>
+              </li>
+              <li>
               <Link
-                style={{ color: "yellow", textDecoration: "none", marginLeft: "15%" }} to="/form">
+                style={{ color: "yellow", textDecoration: "none" , marginLeft:'2%' }} to="/form">
                 Add Smurf
               </Link>
             </li>
