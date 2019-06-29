@@ -1,5 +1,17 @@
-import React, { Component } from 'react';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import SmurfList from "./SmurfList";
+import SmurfForm from './SmurfForm';
+import styled from "styled-components";
+
+const UList = styled.ul`
+  display: flex;
+  margin-left: 35%;
+  list-style: none;
+  border-bottom: 2px grey solid;
+  width: 300px;
+`;
 /*
  to wire this component up you're going to need a few things.
  I'll let you do this part on your own. 
@@ -9,12 +21,25 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <h1>SMURFS! 2.0 W/ Redux</h1>
-        <div>Welcome to your Redux version of Smurfs!</div>
-        <div>Start inside of your `src/index.js` file!</div>
-        <div>Have fun!</div>
-      </div>
+      <Router>
+        <div className="App">
+          <UList>
+            <li>
+              <Link
+                style={{ color: "dodgerblue", textDecoration: "none" }} to="/smurf">
+                Smurf Village
+              </Link>
+              <Link
+                style={{ color: "dodgerblue", textDecoration: "none" }} to="/form">
+                Add Smurf
+              </Link>
+            </li>
+          </UList>
+
+          <Route path="/smurf" component={SmurfList} />
+          <Route path= "/form" component = {SmurfForm}/>
+        </div>
+      </Router>
     );
   }
 }
