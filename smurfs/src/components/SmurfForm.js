@@ -7,7 +7,7 @@ export class SmurfForm extends Component {
         super(props);
         this.state = {
           name: '',
-          id: '',
+          id: undefined,
           age:'',
           height:'',
           addingSmurfs: false,
@@ -51,7 +51,17 @@ export class SmurfForm extends Component {
             value={this.state.height}
             name="height"
           />
-          <button type='submit'>Add Smurf</button>
+          <button 
+           style={{
+            backgroundColor: "dodgerblue",
+            border: "2px solid brown",
+            borderRadius: "10%",
+            color: "white",
+            width: "100px",
+            height: "45px"
+          }}
+
+          type='submit'>Add Smurf</button>
         </form> 
             </div>
         )

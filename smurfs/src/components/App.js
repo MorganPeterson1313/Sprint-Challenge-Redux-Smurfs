@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import SmurfList from "./SmurfList";
-import SmurfForm from './SmurfForm';
+import SmurfForm from "./SmurfForm";
 import styled from "styled-components";
 
 const UList = styled.ul`
@@ -10,7 +10,6 @@ const UList = styled.ul`
   list-style: none;
   border-bottom: 2px coral solid;
   width: auto;
-  
 `;
 /*
  to wire this component up you're going to need a few things.
@@ -22,24 +21,35 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div className="App">
+        <div
+         
+          className="App"
+        >
           <UList>
             <li>
               <Link
-                style={{ color: "yellow", textDecoration: "none", }} to="/smurf">
+                style={{ color: "yellow", textDecoration: "none" }}
+                to="/smurf"
+              >
                 Smurf Village
               </Link>
-              </li>
-              <li>
+            </li>
+            <li>
               <Link
-                style={{ color: "yellow", textDecoration: "none" , marginLeft:'2%' }} to="/form">
+                style={{
+                  color: "yellow",
+                  textDecoration: "none",
+                  marginLeft: "2%"
+                }}
+                to="/form"
+              >
                 Add Smurf
               </Link>
             </li>
           </UList>
 
           <Route path="/smurf" component={SmurfList} />
-          <Route path= "/form" component = {SmurfForm}/>
+          <Route path="/form" component={SmurfForm} />
         </div>
       </Router>
     );

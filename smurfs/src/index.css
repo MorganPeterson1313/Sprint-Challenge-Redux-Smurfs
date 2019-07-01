@@ -4,4 +4,6 @@ body {
   font-family: sans-serif;
   background-image: url(https://d2z8nyy70yf33i.cloudfront.net/wp-content/uploads/smurfs_0011_Zrzut-ekranu-2017-03-29-o-09.59.52-950x524.png);
   background-size: cover;
+  background-blend-mode: luminosity;
+
 }

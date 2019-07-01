@@ -28,7 +28,10 @@ import {
   FETCH_DATA_FAILURE,
   FETCH_SMURF_START,
   FETCH_SMURF_SUCCESS,
-  FETCH_SMURF_FAILURE
+  FETCH_SMURF_FAILURE,
+  DELETE_SMURF_START,
+  DELETE_SMURF_SUCCESS,
+  DELETE_SMURF_FAILURE
 } from "../actions";
 
 const initialState = {
@@ -80,6 +83,25 @@ const reducer = (state = initialState, action) => {
         addingSmurf: false,
         error: action.payload
       };
+      case DELETE_SMURF_START:
+              return {
+                ...state,
+                error: '',
+                deletingSMURF: true
+              };
+            case DELETE_SMURF_SUCCESS:
+              return {
+                ...state,
+                deletingSmurf: false,
+                smurfs: action.payload,
+                error: ''
+              };
+              case DELETE_SMURF_FAILURE:
+                return {
+                  ...state,
+                  deletingSMURF: false,
+                  error: action.payload
+                };
     default:
       return state;
   }
