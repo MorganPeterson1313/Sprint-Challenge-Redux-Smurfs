@@ -9,7 +9,12 @@ const UList = styled.ul`
   display: flex;
   list-style: none;
   border-bottom: 2px coral solid;
-  width: auto;
+  height: 100px;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDS9yjM411PnorQb4CEe4eUulhxl_BwC25TVif5H2_kv1xUwIJDg);
+  background-size: contain;
+  top:0;
+  width: 100%;
+  opacity: 0.5;
 `;
 /*
  to wire this component up you're going to need a few things.
@@ -21,14 +26,11 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div
-         
-          className="App"
-        >
-          <UList>
+        <div className="App" >
+          <UList className = 'sticky'>
             <li>
               <Link
-                style={{ color: "yellow", textDecoration: "none" }}
+                style={{ color: "dodgeblue", textDecoration: "none",fontSize: '30px' }}
                 to="/smurf"
               >
                 Smurf Village
@@ -37,9 +39,11 @@ class App extends Component {
             <li>
               <Link
                 style={{
-                  color: "yellow",
+                  color: "dodgeblue",
                   textDecoration: "none",
-                  marginLeft: "2%"
+                  marginLeft: "2%",
+                  fontSize: '30px',
+                
                 }}
                 to="/form"
               >
@@ -48,7 +52,17 @@ class App extends Component {
             </li>
           </UList>
 
-          <Route path="/smurf" component={SmurfList} />
+          <Route path="/smurf" component={SmurfList} 
+          style = {{
+
+
+            
+
+          }}
+          
+          
+          
+          />
           <Route path="/form" component={SmurfForm} />
         </div>
       </Router>

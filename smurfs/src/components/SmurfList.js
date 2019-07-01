@@ -15,9 +15,12 @@ export class SmurfList extends Component {
   render() {
     console.log("smurflist log", this.props.smurfs);
     return (
-      <div>
+      <div style= {{display: 'flex' , flexWrap: 'wrap', margin: '15%', alignContent: 'spaceAround'
+  
+    }}>
         {this.props.smurfs.map(smurf => {
           return (
+  <div  >
             <div
               style={{
                 bacgroundColor: "rgba(0, 0, 0,.03)",
@@ -25,13 +28,14 @@ export class SmurfList extends Component {
                 margin: "5%",
                 width: "400px",
                 height: "200px",
-                marginLeft: "35%",
+                marginLeft: "5%",
                 backgroundImage:
                   "url(http://snappi-wpengine.netdna-ssl.com/wp-content/uploads/2017/01/smurfs0001_0.jpg)",
                 backgroundSize: "cover",
                 backgroundRepeat: "noRepeat",
                 backgroundBlendMode: "",
-                opacity: "0.7"
+                opacity: "0.7",
+            
               }}
             >
               <Smurf key={smurf.id} smurf={smurf} />
@@ -49,9 +53,11 @@ export class SmurfList extends Component {
                 Delete
               </button>
             </div>
+  </div>
           );
         })}
       </div>
+      
     );
   }
 }

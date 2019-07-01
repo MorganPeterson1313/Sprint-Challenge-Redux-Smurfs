@@ -31,7 +31,7 @@ export class SmurfForm extends Component {
 
     render() {
         return (
-            <div>
+            <div style={{marginTop:'20%', display: 'block'}} >
                 <form onSubmit={this.addSmurf}>
           <input
             onChange={this.handleInputChange}
